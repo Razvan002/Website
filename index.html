@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Proiect</title>
+    <script src="index.js"></script>
+    
     
 </head>
 <body>
@@ -18,27 +20,34 @@
     </header>
 
         <!-- Login popup -->
-
-        <div class="overlay" id="overlay" onclick="closeModals()"></div>
-        <div class="modal" id="login-modal">
-            <button class="exit-button" onclick="closeModals()">X</button>
+    <div class="popup" id="login-popup">
+        <div class="close-btn-login">&times;</div>
+        <div class="form">
             <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-    
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-    
-                <button type="submit">Submit</button>
-            </form>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password" id="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="form-element">
+                <button>Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password?</a>
+            </div>
         </div>
+    </div>
     <!-- Signup popup -->
-
-<div class="center">
-</div>
-<div class="popup">
-    <div class="close-btn">&times;</div>
+ <!--
+<div class="popup" id="register-popup" onclick="closeModals()">
+    <div class="close-btn-register">&times;</div>
     <div class="form">
         <h2>Register</h2>
 
@@ -72,26 +81,6 @@
             </div>
     </div>
 </div>
-    
-<script>
-    function openLoginForm() {
-    document.getElementById('login-modal').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
-}
-
-function openSignupForm() {
-    document.getElementById('signup-modal').style.display = 'block';
-    document.getElementById('overlay').style.display = 'block';
-}
-
-function closeModals() {
-    document.getElementById('login-modal').style.display = 'none';
-    document.getElementById('signup-modal').style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-}
-</script>
-
-
-
+-->
 </body>
 </html>
